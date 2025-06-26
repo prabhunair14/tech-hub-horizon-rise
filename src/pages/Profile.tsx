@@ -95,20 +95,20 @@ const Profile = () => {
                     </Avatar>
                     
                     <h2 className="text-xl font-bold text-foreground mb-1">{profile.fullName}</h2>
-                    <p className="text-muted-foreground mb-4">{profile.email}</p>
+                    <p className="text-gray-700 mb-4">{profile.email}</p>
                     
                     <div className="space-y-2 text-sm">
                       <div className="flex items-center justify-center space-x-2">
-                        <MapPin className="h-4 w-4 text-muted-foreground" />
-                        <span>{profile.location}</span>
+                        <MapPin className="h-4 w-4 text-gray-600" />
+                        <span className="text-gray-700">{profile.location}</span>
                       </div>
                       <div className="flex items-center justify-center space-x-2">
-                        <Users className="h-4 w-4 text-muted-foreground" />
-                        <span>3 Active Mentorships</span>
+                        <Users className="h-4 w-4 text-gray-600" />
+                        <span className="text-gray-700">3 Active Mentorships</span>
                       </div>
                       <div className="flex items-center justify-center space-x-2">
-                        <Calendar className="h-4 w-4 text-muted-foreground" />
-                        <span>Member since Jan 2024</span>
+                        <Calendar className="h-4 w-4 text-gray-600" />
+                        <span className="text-gray-700">Member since Jan 2024</span>
                       </div>
                     </div>
                   </div>
@@ -141,53 +141,53 @@ const Profile = () => {
               <Card className="border-0 bg-white/70 backdrop-blur-sm">
                 <CardHeader>
                   <CardTitle>Basic Information</CardTitle>
-                  <CardDescription>Your personal and contact details</CardDescription>
+                  <CardDescription className="text-gray-700">Your personal and contact details</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <Label htmlFor="fullName">Full Name</Label>
+                      <Label htmlFor="fullName" className="text-gray-700">Full Name</Label>
                       <Input
                         id="fullName"
                         value={profile.fullName}
                         onChange={(e) => setProfile({ ...profile, fullName: e.target.value })}
                         disabled={!isEditing}
-                        className="mt-1"
+                        className="mt-1 text-gray-700"
                       />
                     </div>
                     <div>
-                      <Label htmlFor="email">Email</Label>
+                      <Label htmlFor="email" className="text-gray-700">Email</Label>
                       <Input
                         id="email"
                         type="email"
                         value={profile.email}
                         onChange={(e) => setProfile({ ...profile, email: e.target.value })}
                         disabled={!isEditing}
-                        className="mt-1"
+                        className="mt-1 text-gray-700"
                       />
                     </div>
                   </div>
                   
                   <div>
-                    <Label htmlFor="location">Location</Label>
+                    <Label htmlFor="location" className="text-gray-700">Location</Label>
                     <Input
                       id="location"
                       value={profile.location}
                       onChange={(e) => setProfile({ ...profile, location: e.target.value })}
                       disabled={!isEditing}
-                      className="mt-1"
+                      className="mt-1 text-gray-700"
                     />
                   </div>
                   
                   <div>
-                    <Label htmlFor="bio">Bio</Label>
+                    <Label htmlFor="bio" className="text-gray-700">Bio</Label>
                     <Textarea
                       id="bio"
                       value={profile.bio}
                       onChange={(e) => setProfile({ ...profile, bio: e.target.value })}
                       disabled={!isEditing}
                       rows={3}
-                      className="mt-1"
+                      className="mt-1 text-gray-700"
                     />
                   </div>
                 </CardContent>
@@ -198,7 +198,7 @@ const Profile = () => {
                 <Card className="border-0 bg-white/70 backdrop-blur-sm">
                   <CardHeader>
                     <CardTitle>Skills</CardTitle>
-                    <CardDescription>Select all skills that apply to you</CardDescription>
+                    <CardDescription className="text-gray-700">Select all skills that apply to you</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
@@ -209,7 +209,7 @@ const Profile = () => {
                           className={`cursor-pointer text-center justify-center py-2 px-3 ${
                             profile.skills.includes(skill)
                               ? "bg-orange-400 hover:bg-orange-500 text-white"
-                              : "hover:bg-orange-100"
+                              : "hover:bg-orange-100 text-gray-700 border-gray-300"
                           }`}
                           onClick={() => toggleSkill(skill)}
                         >
@@ -225,7 +225,7 @@ const Profile = () => {
               <Card className="border-0 bg-white/70 backdrop-blur-sm">
                 <CardHeader>
                   <CardTitle>Career Goals</CardTitle>
-                  <CardDescription>Your professional aspirations and objectives</CardDescription>
+                  <CardDescription className="text-gray-700">Your professional aspirations and objectives</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <Textarea
@@ -234,6 +234,7 @@ const Profile = () => {
                     disabled={!isEditing}
                     rows={4}
                     placeholder="Describe your career goals and how mentorship can help you achieve them..."
+                    className="text-gray-700 placeholder:text-gray-500"
                   />
                 </CardContent>
               </Card>
@@ -242,12 +243,12 @@ const Profile = () => {
               <Card className="border-0 bg-white/70 backdrop-blur-sm">
                 <CardHeader>
                   <CardTitle>Mentorship Preferences</CardTitle>
-                  <CardDescription>How you prefer to engage in mentorship</CardDescription>
+                  <CardDescription className="text-gray-700">How you prefer to engage in mentorship</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <Label htmlFor="availability">Availability</Label>
+                      <Label htmlFor="availability" className="text-gray-700">Availability</Label>
                       <Select
                         value={profile.availability}
                         onValueChange={(value) => setProfile({ ...profile, availability: value })}
@@ -265,7 +266,7 @@ const Profile = () => {
                     </div>
                     
                     <div>
-                      <Label htmlFor="mentorshipStyle">Preferred Style</Label>
+                      <Label htmlFor="mentorshipStyle" className="text-gray-700">Preferred Style</Label>
                       <Select
                         value={profile.mentorshipStyle}
                         onValueChange={(value) => setProfile({ ...profile, mentorshipStyle: value })}
@@ -285,8 +286,8 @@ const Profile = () => {
                   
                   <div className="flex items-center justify-between p-4 bg-gradient-to-r from-orange-100 to-yellow-100 rounded-lg">
                     <div>
-                      <Label htmlFor="mentoring">Available for Mentoring Others</Label>
-                      <p className="text-sm text-muted-foreground">
+                      <Label htmlFor="mentoring" className="text-gray-700">Available for Mentoring Others</Label>
+                      <p className="text-sm text-gray-700">
                         Share your knowledge and help other women in tech
                       </p>
                     </div>

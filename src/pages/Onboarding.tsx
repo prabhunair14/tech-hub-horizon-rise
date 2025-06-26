@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -84,7 +85,7 @@ const Onboarding = () => {
       // Complete onboarding
       console.log("Onboarding completed with data:", data);
       toast({
-        title: "Welcome to Horizon!",
+        title: "Welcome to Herizon!",
         description: "Your profile has been created successfully.",
       });
       navigate("/dashboard");
@@ -132,24 +133,24 @@ const Onboarding = () => {
               <CardTitle className="text-xl text-center">Welcome! Tell us about yourself</CardTitle>
               <div className="space-y-4">
                 <div>
-                  <Label htmlFor="fullName">Full Name</Label>
+                  <Label htmlFor="fullName" className="text-gray-700">Full Name</Label>
                   <Input
                     id="fullName"
                     value={data.fullName}
                     onChange={(e) => setData({ ...data, fullName: e.target.value })}
                     placeholder="Enter your full name"
-                    className="mt-1"
+                    className="mt-1 text-gray-700 placeholder:text-gray-500"
                   />
                 </div>
                 <div>
-                  <Label htmlFor="email">Email</Label>
+                  <Label htmlFor="email" className="text-gray-700">Email</Label>
                   <Input
                     id="email"
                     type="email"
                     value={data.email}
                     onChange={(e) => setData({ ...data, email: e.target.value })}
                     placeholder="Enter your email address"
-                    className="mt-1"
+                    className="mt-1 text-gray-700 placeholder:text-gray-500"
                   />
                 </div>
               </div>
@@ -160,7 +161,7 @@ const Onboarding = () => {
             <div className="space-y-4">
               <CardTitle className="text-xl text-center">Where are you located?</CardTitle>
               <div>
-                <Label htmlFor="location" className="flex items-center space-x-2">
+                <Label htmlFor="location" className="flex items-center space-x-2 text-gray-700">
                   <MapPin className="h-4 w-4" />
                   <span>Location</span>
                 </Label>
@@ -169,7 +170,7 @@ const Onboarding = () => {
                   value={data.location}
                   onChange={(e) => handleLocationChange(e.target.value)}
                   placeholder="City, State/Country"
-                  className="mt-1"
+                  className="mt-1 text-gray-700 placeholder:text-gray-500"
                 />
                 {techHubInfo?.isTechHub && (
                   <div className="mt-4 p-4 bg-gradient-to-r from-orange-100 to-yellow-100 rounded-lg border-0">
@@ -199,7 +200,7 @@ const Onboarding = () => {
                     className={`cursor-pointer text-center justify-center py-2 px-3 ${
                       data.skills.includes(skill)
                         ? "bg-orange-400 hover:bg-orange-500 text-white"
-                        : "hover:bg-orange-100"
+                        : "hover:bg-orange-100 text-gray-700 border-gray-300"
                     }`}
                     onClick={() => toggleSkill(skill)}
                   >
@@ -219,14 +220,14 @@ const Onboarding = () => {
             <div className="space-y-4">
               <CardTitle className="text-xl text-center">What are your career goals?</CardTitle>
               <div>
-                <Label htmlFor="careerGoals">Career Goals</Label>
+                <Label htmlFor="careerGoals" className="text-gray-700">Career Goals</Label>
                 <Textarea
                   id="careerGoals"
                   value={data.careerGoals}
                   onChange={(e) => setData({ ...data, careerGoals: e.target.value })}
                   placeholder="Describe your career aspirations, what you'd like to achieve, and how mentorship can help you..."
                   rows={4}
-                  className="mt-1"
+                  className="mt-1 text-gray-700 placeholder:text-gray-500"
                 />
               </div>
             </div>
