@@ -120,7 +120,7 @@ const CareerPlanner = () => {
       <main className="container mx-auto px-4 py-8">
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-foreground mb-2">Career Planner</h1>
-          <p className="text-muted-foreground">
+          <p className="text-gray-700">
             Drag and drop to prioritize your skill development goals
           </p>
         </div>
@@ -133,7 +133,7 @@ const CareerPlanner = () => {
                 <div className="flex items-center justify-between">
                   <div>
                     <CardTitle>Your Skill Development Path</CardTitle>
-                    <CardDescription>
+                    <CardDescription className="text-gray-700">
                       Reorder skills by dragging to set your learning priorities
                     </CardDescription>
                   </div>
@@ -165,7 +165,7 @@ const CareerPlanner = () => {
                                 <div className="flex items-start space-x-4">
                                   <div
                                     {...provided.dragHandleProps}
-                                    className="mt-2 text-muted-foreground hover:text-foreground cursor-grab"
+                                    className="mt-2 text-gray-600 hover:text-foreground cursor-grab"
                                   >
                                     <GripVertical className="h-5 w-5" />
                                   </div>
@@ -187,7 +187,7 @@ const CareerPlanner = () => {
                                     
                                     <div className="mb-3">
                                       <div className="flex items-center justify-between mb-1">
-                                        <span className="text-sm text-muted-foreground">Progress</span>
+                                        <span className="text-sm text-gray-600">Progress</span>
                                         <span className="text-sm font-medium">{skill.progress}%</span>
                                       </div>
                                       <Progress value={skill.progress} className="h-2" />
@@ -233,7 +233,7 @@ const CareerPlanner = () => {
                   <div>
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-sm font-medium">Overall Progress</span>
-                      <span className="text-sm text-muted-foreground">39%</span>
+                      <span className="text-sm text-gray-600">39%</span>
                     </div>
                     <Progress value={39} className="h-2" />
                   </div>
@@ -262,7 +262,7 @@ const CareerPlanner = () => {
                     <BookOpen className="h-5 w-5 text-orange-600" />
                     <div className="flex-1">
                       <p className="text-sm font-medium">AWS Solutions Architect</p>
-                      <p className="text-xs text-muted-foreground">Based on your Cloud Computing goal</p>
+                      <p className="text-xs text-gray-600">Based on your Cloud Computing goal</p>
                     </div>
                   </div>
                   
@@ -270,7 +270,7 @@ const CareerPlanner = () => {
                     <BookOpen className="h-5 w-5 text-yellow-600" />
                     <div className="flex-1">
                       <p className="text-sm font-medium">Leadership Communication</p>
-                      <p className="text-xs text-muted-foreground">Trending in your network</p>
+                      <p className="text-xs text-gray-600">Trending in your network</p>
                     </div>
                   </div>
                 </div>

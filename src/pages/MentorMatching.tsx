@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -91,7 +90,7 @@ const MentorMatching = () => {
         <Navigation />
         <div className="container mx-auto px-4 py-8 text-center">
           <h1 className="text-3xl font-bold mb-4">No more mentors to show!</h1>
-          <p className="text-muted-foreground">Check back later for new mentor profiles.</p>
+          <p className="text-gray-700">Check back later for new mentor profiles.</p>
         </div>
       </div>
     );
@@ -104,7 +103,7 @@ const MentorMatching = () => {
       <main className="container mx-auto px-4 py-8">
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-foreground mb-2">Find Your Perfect Mentor</h1>
-          <p className="text-muted-foreground">
+          <p className="text-gray-700">
             Swipe right to connect, left to pass. Find mentors who align with your goals.
           </p>
         </div>
@@ -142,18 +141,18 @@ const MentorMatching = () => {
             <CardContent className="space-y-6">
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div className="flex items-center space-x-2">
-                  <MapPin className="h-4 w-4 text-muted-foreground" />
+                  <MapPin className="h-4 w-4 text-gray-600" />
                   <span>{currentMentor.location}</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Users className="h-4 w-4 text-muted-foreground" />
+                  <Users className="h-4 w-4 text-gray-600" />
                   <span>{currentMentor.mentees} mentees</span>
                 </div>
               </div>
 
               <div>
                 <h4 className="font-medium mb-2">Experience</h4>
-                <p className="text-sm text-muted-foreground">{currentMentor.experience} in industry</p>
+                <p className="text-sm text-gray-700">{currentMentor.experience} in industry</p>
               </div>
 
               <div>
@@ -169,7 +168,7 @@ const MentorMatching = () => {
 
               <div>
                 <h4 className="font-medium mb-2">About</h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-sm text-gray-700 leading-relaxed">
                   {currentMentor.bio}
                 </p>
               </div>
@@ -193,7 +192,7 @@ const MentorMatching = () => {
                 </Button>
               </div>
 
-              <p className="text-center text-xs text-muted-foreground">
+              <p className="text-center text-xs text-gray-600">
                 {currentMentorIndex + 1} of {mockMentors.length} mentors
               </p>
             </CardContent>

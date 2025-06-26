@@ -18,7 +18,7 @@ const Dashboard = () => {
           <h1 className="text-3xl font-bold text-foreground mb-2">
             Welcome back, {userName}! 👋
           </h1>
-          <p className="text-muted-foreground">
+          <p className="text-gray-700">
             Ready to continue your growth journey? Here's what's waiting for you.
           </p>
         </div>
@@ -29,7 +29,7 @@ const Dashboard = () => {
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm font-medium text-muted-foreground">Active Mentors</p>
+                  <p className="text-sm font-medium text-gray-600">Active Mentors</p>
                   <p className="text-2xl font-bold text-foreground">3</p>
                 </div>
                 <Users className="h-8 w-8 text-orange-400" />
@@ -41,7 +41,7 @@ const Dashboard = () => {
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm font-medium text-muted-foreground">Sessions This Month</p>
+                  <p className="text-sm font-medium text-gray-600">Sessions This Month</p>
                   <p className="text-2xl font-bold text-foreground">8</p>
                 </div>
                 <Calendar className="h-8 w-8 text-yellow-400" />
@@ -53,7 +53,7 @@ const Dashboard = () => {
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm font-medium text-muted-foreground">Skills Progress</p>
+                  <p className="text-sm font-medium text-gray-600">Skills Progress</p>
                   <p className="text-2xl font-bold text-foreground">75%</p>
                 </div>
                 <User className="h-8 w-8 text-green-400" />
@@ -65,7 +65,7 @@ const Dashboard = () => {
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm font-medium text-muted-foreground">Events Attended</p>
+                  <p className="text-sm font-medium text-gray-600">Events Attended</p>
                   <p className="text-2xl font-bold text-foreground">12</p>
                 </div>
                 <MapPin className="h-8 w-8 text-orange-400" />
@@ -83,7 +83,7 @@ const Dashboard = () => {
                   <Users className="h-6 w-6 text-orange-600" />
                 </div>
                 <CardTitle className="text-xl">Find New Mentors</CardTitle>
-                <CardDescription>
+                <CardDescription className="text-gray-700">
                   Discover mentors who align with your career goals and interests
                 </CardDescription>
               </CardHeader>
@@ -103,7 +103,7 @@ const Dashboard = () => {
                   <Calendar className="h-6 w-6 text-yellow-600" />
                 </div>
                 <CardTitle className="text-xl">Career Planner</CardTitle>
-                <CardDescription>
+                <CardDescription className="text-gray-700">
                   Build your roadmap and track progress on your professional goals
                 </CardDescription>
               </CardHeader>
@@ -122,7 +122,7 @@ const Dashboard = () => {
                 <MapPin className="h-6 w-6 text-green-600" />
               </div>
               <CardTitle className="text-xl">Local Events</CardTitle>
-              <CardDescription>
+              <CardDescription className="text-gray-700">
                 Discover networking events and conferences in your area
               </CardDescription>
             </CardHeader>
@@ -139,14 +139,14 @@ const Dashboard = () => {
         <Card className="border-0 bg-white/70 backdrop-blur-sm">
           <CardHeader>
             <CardTitle className="text-xl">Upcoming Sessions</CardTitle>
-            <CardDescription>Your scheduled mentorship sessions</CardDescription>
+            <CardDescription className="text-gray-700">Your scheduled mentorship sessions</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
               <div className="flex items-center justify-between p-4 bg-gradient-to-r from-orange-100 to-yellow-100 rounded-lg">
                 <div>
                   <p className="font-medium">1:1 with Jennifer Chen</p>
-                  <p className="text-sm text-muted-foreground">Tomorrow, 2:00 PM - Career Development</p>
+                  <p className="text-sm text-gray-600">Tomorrow, 2:00 PM - Career Development</p>
                 </div>
                 <Button size="sm" variant="outline">Join</Button>
               </div>
@@ -154,7 +154,7 @@ const Dashboard = () => {
               <div className="flex items-center justify-between p-4 bg-gradient-to-r from-yellow-100 to-green-100 rounded-lg">
                 <div>
                   <p className="font-medium">Group Session: Technical Leadership</p>
-                  <p className="text-sm text-muted-foreground">Friday, 4:00 PM - with 5 other mentees</p>
+                  <p className="text-sm text-gray-600">Friday, 4:00 PM - with 5 other mentees</p>
                 </div>
                 <Button size="sm" variant="outline">Join</Button>
               </div>

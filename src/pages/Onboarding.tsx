@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -119,10 +118,10 @@ const Onboarding = () => {
         <CardHeader className="text-center">
           <div className="flex items-center justify-center space-x-2 mb-4">
             <div className="w-8 h-8 bg-gradient-to-r from-orange-400 to-yellow-400 rounded-lg"></div>
-            <h1 className="text-2xl font-bold text-foreground">Horizon</h1>
+            <h1 className="text-2xl font-bold text-foreground">Herizon</h1>
           </div>
           <Progress value={progress} className="w-full h-2" />
-          <CardDescription className="mt-4">
+          <CardDescription className="mt-4 text-gray-700">
             Step {step} of {totalSteps} - Let's get you started
           </CardDescription>
         </CardHeader>
@@ -176,7 +175,7 @@ const Onboarding = () => {
                   <div className="mt-4 p-4 bg-gradient-to-r from-orange-100 to-yellow-100 rounded-lg border-0">
                     <div className="flex items-center space-x-2">
                       <Sparkles className="h-5 w-5 text-orange-500" />
-                      <p className="text-sm font-medium">
+                      <p className="text-sm font-medium text-gray-700">
                         🌟 You're in a tech hub! {techHubInfo.percentage}% of jobs in your region are in tech—great opportunities for mentorship and growth.
                       </p>
                     </div>
@@ -189,7 +188,7 @@ const Onboarding = () => {
           {step === 3 && (
             <div className="space-y-4">
               <CardTitle className="text-xl text-center">What are your skills?</CardTitle>
-              <CardDescription className="text-center">
+              <CardDescription className="text-center text-gray-700">
                 Select all skills that apply to you
               </CardDescription>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
@@ -209,7 +208,7 @@ const Onboarding = () => {
                 ))}
               </div>
               {data.skills.length > 0 && (
-                <p className="text-sm text-muted-foreground text-center">
+                <p className="text-sm text-gray-600 text-center">
                   Selected {data.skills.length} skill{data.skills.length !== 1 ? 's' : ''}
                 </p>
               )}
