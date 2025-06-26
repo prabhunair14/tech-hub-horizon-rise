@@ -9,6 +9,7 @@
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview"
+    "start": "npm run preview"
   },
   "dependencies": {
     "@hello-pangea/dnd": "^18.0.1",
