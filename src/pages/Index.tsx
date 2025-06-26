@@ -12,7 +12,7 @@ const Index = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-r from-orange-400 to-yellow-400 rounded-lg"></div>
-            <h1 className="text-2xl font-bold text-foreground">Horizon</h1>
+            <h1 className="text-2xl font-bold text-foreground">Herizon</h1>
           </div>
           <Link to="/onboarding">
             <Button className="bg-orange-400 hover:bg-orange-500 text-white">
@@ -29,7 +29,7 @@ const Index = () => {
             Empowering Women in Tech Through
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-yellow-400 to-green-400"> Mentorship</span>
           </h2>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
             Connect with industry leaders, access career opportunities, and build meaningful relationships that accelerate your growth in technology.
           </p>
           <Link to="/onboarding">
@@ -52,7 +52,7 @@ const Index = () => {
               <CardTitle className="text-xl">Smart Mentor Matching</CardTitle>
             </CardHeader>
             <CardContent>
-              <CardDescription className="text-center text-muted-foreground">
+              <CardDescription className="text-center text-gray-700">
                 Our algorithm connects you with mentors who align with your career goals, skills, and aspirations.
               </CardDescription>
             </CardContent>
@@ -66,7 +66,7 @@ const Index = () => {
               <CardTitle className="text-xl">Career Planning</CardTitle>
             </CardHeader>
             <CardContent>
-              <CardDescription className="text-center text-muted-foreground">
+              <CardDescription className="text-center text-gray-700">
                 Build personalized career roadmaps with skill recommendations and training resources.
               </CardDescription>
             </CardContent>
@@ -80,7 +80,7 @@ const Index = () => {
               <CardTitle className="text-xl">Local Tech Events</CardTitle>
             </CardHeader>
             <CardContent>
-              <CardDescription className="text-center text-muted-foreground">
+              <CardDescription className="text-center text-gray-700">
                 Discover networking events, conferences, and workshops in your area to expand your professional network.
               </CardDescription>
             </CardContent>
@@ -95,7 +95,7 @@ const Index = () => {
             <h3 className="text-3xl font-bold text-foreground mb-4">
               Ready to Accelerate Your Career?
             </h3>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
               Join thousands of women who are already building meaningful connections and advancing their careers in tech.
             </p>
             <Link to="/onboarding">

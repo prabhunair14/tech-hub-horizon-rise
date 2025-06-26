@@ -20,7 +20,7 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/dashboard" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-r from-orange-400 to-yellow-400 rounded-lg"></div>
-            <h1 className="text-xl font-bold text-foreground">Horizon</h1>
+            <h1 className="text-xl font-bold text-foreground">Herizon</h1>
           </Link>
 
           {/* Navigation */}
